@@ -217,14 +217,11 @@
 								<goals>
 									<goal>testCompile</goal>
 								</goals>
-								<configuration>
+								<configuration combine.self="override">
 									<release>${java.vm.specification.version}</release>
 									<compilerArgs>
 										<arg>--enable-preview</arg>
 									</compilerArgs>
-									<testIncludes>
-										<testInclude>jdk14/**</testInclude>
-									</testIncludes>
 								</configuration>
 							</execution>
 						</executions>
@@ -241,10 +238,7 @@
 								<goals>
 									<goal>test</goal>
 								</goals>
-								<configuration>
-									<includes>
-										<include>jdk14/**</include>
-									</includes>
+								<configuration combine.self="override">
 									<argLine>--enable-preview</argLine>
 								</configuration>
 							</execution>
